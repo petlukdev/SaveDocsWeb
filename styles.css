@@ -1,0 +1,83 @@
+:root {
+    --green: #4B8F8C;
+    --blue: #484D6D;
+    --left: 7vw;
+    --top: 5vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: 'Roboto', serif;
+    line-height: 1.6;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Hlavička */
+
+header {
+    background-color: var(--green);
+    padding: var(--top) var(--left);
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: inline-block;
+    line-height: 0;
+}
+
+header .logo img {
+    width: 10em;
+}
+
+header .container-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header nav {
+    padding-left: 3em;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+header button {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: var(--blue);
+    color: white;
+    padding: 10px 35px;
+    border: 3px solid var(--blue);
+}
+
+header button:hover {
+    background-color: transparent;
+    color: var(--blue);
+    border: 3px solid var(--blue);
+    transition: .1s;
+}

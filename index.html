@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css"/>
     
     <meta name="author" content="Petr Lukas">
     <meta name="application-name" content="SaveDocs">
@@ -25,21 +27,23 @@
     <meta property="og:type" content="website">
 </head>
 <body>
-    <nav>
-        <a href="index.html">
-            <img src="img/Logo.png"/>
-        </a>
-        <ul>
-            <li>
-                <a href="html/about.html">About Us</a>
-            </li>
-            <li>
-                <a href="html/plans.html">Plans</a>
-            </li>
-        </ul>
-        <button>Sign Up</button>
-        <button>Log In</button>
-    </nav>
+    <header>
+        <div class="container">
+            <div class="container-left">
+                <a class="logo" href="index.html">
+                    <img src="img/Logo.png"/>
+                </a>
+                <nav>
+                    <a href="html/about.html">About Us</a>
+                    <a href="html/plans.html">Plans</a>
+                </nav>
+            </div>
+            <div class="bttns">
+                <button>Sign Up</button>
+                <button>Log In</button>
+            </div>
+        </div>
+    </header>
     <section>
         <div>
             <h1>Keep your important documents in a safe place</h1>
