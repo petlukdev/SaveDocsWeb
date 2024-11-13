@@ -191,3 +191,28 @@ main img {
     width: 5em;
     height: 5em;
 }
+
+/* Reference */
+
+.reference {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60vh;
+    padding: var(--top) var(--left);
+}
+
+.reference div {
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+}
+
+.reference img {
+    width: 200px;
+}
+
+#apple {
+    width: 165px;
+}
