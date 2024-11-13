@@ -34,6 +34,17 @@ body::-webkit-scrollbar {
     transition: .1s;
 }
 
+h2 {
+    font-size: 42px;
+}
+
+hr {
+    margin: auto;
+    width: 80%;
+    border: 0;
+    border-top: 1px solid gainsboro; 
+}
+
 /* Hlavička */
 
 header {
@@ -132,4 +143,51 @@ main div .btn {
 
 main img {
     margin-right: var(--left);
+}
+
+/* Features */
+
+#features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60vh;
+    padding: var(--top) var(--left);
+}
+
+.feat-container {
+    display: flex;
+}
+
+.feat-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feat-container h3 {
+    font-size: 32px;
+}
+
+.feat-container p {
+    width: 15em;
+    text-align: center;
+    font-size: 24px;
+    color: gray;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.5em;
+    width: 7.5em;
+    background-color: gainsboro;
+    border-radius: 50%;
+}
+
+.circle img {
+    width: 5em;
+    height: 5em;
 }
