@@ -158,6 +158,8 @@ main img {
 
 .feat-container {
     display: flex;
+    justify-content: space-around;
+    width: 80vw;
 }
 
 .feat-container div {
@@ -194,7 +196,7 @@ main img {
 
 /* Reference */
 
-.reference {
+#reference {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,16 +205,55 @@ main img {
     padding: var(--top) var(--left);
 }
 
-.reference div {
+#reference div {
     display: flex;
     justify-content: space-around;
     width: 50vw;
 }
 
-.reference img {
+#reference img {
     width: 200px;
 }
 
-#apple {
+#reference #apple {
     width: 165px;
+}
+
+/* Last section */
+
+#last {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 40vh;
+    padding: var(--top) var(--left);
+}
+
+#last .btn {
+    display: inline-flex;
+    background-color: var(--blue);
+    color: white;
+    width: 10em;
+    height: 2em;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#last .btn:hover {
+    background-color: transparent;
+    color: var(--blue);
+    border: 3px solid var(--blue);
+    transition: .1s;
+}
+
+#last p {
+    color: gray;
+    text-align: center;
+}
+
+#last p a {
+    color: var(--blue);
 }
