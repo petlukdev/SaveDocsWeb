@@ -93,6 +93,7 @@ header .btn {
 main {
     display: flex;
     justify-content: space-around;
+    overflow: hidden;
     width: 100vw;
     height: 85vh;
     color: white;
@@ -130,8 +131,5 @@ main div .btn {
 }
 
 main img {
-    height: 80vh;
-    max-height: 80vh;
     margin-right: var(--left);
-    margin-top: 46px;
 }
