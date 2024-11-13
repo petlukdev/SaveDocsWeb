@@ -12,9 +12,12 @@
 }
 
 body {
-    height: 100%;
     font-family: 'Roboto', serif;
-    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 button {
@@ -23,11 +26,20 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+    background-color: transparent;
+    color: var(--blue);
+    border: 3px solid var(--blue);
+    transition: .1s;
+}
+
 /* Hlavička */
 
 header {
     background-color: var(--green);
     padding: var(--top) var(--left);
+    width: 100vw;
+    height: 15vh;
 }
 
 header .container{
@@ -75,9 +87,47 @@ header button {
     border: 3px solid var(--blue);
 }
 
-header button:hover {
-    background-color: transparent;
-    color: var(--blue);
-    border: 3px solid var(--blue);
-    transition: .1s;
+/* Hlavní sekce */
+
+main {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 85vh;
+    color: white;
+    background: linear-gradient(var(--green), #519996, #346361);
+}
+
+main div {
+    margin: var(--top) var(--left);
+    padding: var(--top) var(--left);
+}
+
+main div h1 {
+    font-size: 64px;
+}
+
+main div p {
+    font-size: 32px;
+}
+
+main div h1, main div p {
+    cursor: default;
+    padding-bottom: var(--top);
+}
+
+main div button {
+    background-color: var(--blue);
+    color: white;
+    width: 100%;
+    height: 2em;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+main img {
+    height: 80vh;
+    max-height: 80vh;
+    margin-right: var(--left);
+    margin-top: 46px;
 }
