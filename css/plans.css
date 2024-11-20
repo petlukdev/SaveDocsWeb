@@ -1,0 +1,220 @@
+:root {
+    --green: #4B8F8C;
+    --blue: #484D6D;
+    --left: 7vw;
+    --top: 5vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Kadwa', sans-serif;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-wrap: nowrap;
+    text-decoration: none;
+    color: white;
+    background-color: var(--blue);
+    border: 3px solid var(--blue);
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--blue);
+    border: 3px solid var(--blue);
+    transition: .1s;
+}
+
+/* Hlavička */
+
+header {
+    background-color: var(--green);
+    padding: var(--top) var(--left);
+    width: 100vw;
+    height: 15vh;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: inline-block;
+    line-height: 0;
+}
+
+header .logo img {
+    width: 10em;
+}
+
+header .container-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header nav {
+    padding-left: 3em;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding-left: 20px;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+header .btn {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: var(--blue);
+    padding: 10px 35px;
+}
+
+/* Hlavní sekce */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: var(--top) var(--left);
+}
+
+main h2 {
+    font-size: 42px;
+}
+
+main h3 {
+    font-size: 32px;
+}
+
+main .plans {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    width: 100%;
+    height: 35em;
+    padding: var(--top);
+}
+
+main .plans div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+
+main .plans div span {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+main .plans div span small {
+    font-size: 20px;
+}
+
+main .plans div ul li {
+    list-style: none;
+    background: url('../img/Check.png') 0 0 no-repeat;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+main .plans .basic ul li:nth-last-child(-n + 2), 
+main .plans .pro ul li:nth-last-child(1) {
+    background: url('../img/X.png') 0 0 no-repeat;
+}
+
+main .plans div a {
+    text-decoration: none;
+    color: white;
+    width: 90%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 35px;
+}
+
+main p {
+    text-align: center;
+    color: gray;
+}
+
+main p a {
+    color: var(--blue);
+}
+
+/* Patička */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--top) var(--left);
+    color: white;
+    background-color: #162928;
+}
+
+footer .container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer img {
+    width: 10em;
+}
+
+footer .container-left span {
+    font-family: 'Kadwa';
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+.link-container span {
+    font-size: 26px;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+footer li {
+    padding-bottom: 5px;
+}
+
+footer a {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+}
