@@ -37,6 +37,7 @@ body::-webkit-scrollbar {
 
 h2 {
     font-size: 42px;
+    text-align: center;
 }
 
 hr {
@@ -66,7 +67,8 @@ header .logo {
     line-height: 0;
 }
 
-header .logo img {
+header .logo img,
+header .container-collapse img {
     width: 10em;
 }
 
@@ -100,6 +102,53 @@ header .btn {
     border: 3px solid var(--blue);
 }
 
+header .container-collapse {
+    display: none;
+}
+
+header .menu-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+/* Boční menu */
+
+aside {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+aside a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+    color: white;
+    text-wrap: nowrap;
+}
+
+aside .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 64px;
+    background: none;
+    border: none;
+    color: white;
+}
+
 /* Hlavní sekce */
 
 main {
@@ -113,8 +162,9 @@ main {
 }
 
 main div {
+    width: 25vw;
+    height: 70vh;
     margin: var(--top) var(--left);
-    padding: var(--top) 5em;
 }
 
 main div h1 {
@@ -143,6 +193,8 @@ main div .btn {
 }
 
 main img {
+    align-self: flex-end;
+    width: 43em;
     margin-right: var(--left);
 }
 
@@ -309,4 +361,195 @@ footer a {
     font-size: 20px;
     font-weight: 300;
     text-decoration: none;
+}
+
+@media screen and (max-width: 1562px) {
+    main div h1 {
+        font-size: 50px;
+    }
+
+    main div p {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 1423px) {
+    
+    main img {
+        width: 38em;
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+
+    .feat-container div {
+        height: 12em;
+    }
+    
+    .feat-container h3 {
+        font-size: 26px;
+    }
+    
+    .feat-container p {
+        width: 15em;
+        text-align: center;
+        font-size: 18px;
+        color: gray;
+    }
+    
+    .circle {
+        height: 6.5em !important;
+        width: 6.5em !important;
+    }
+    
+    .circle img {
+        width: 4em;
+        height: 4em;
+    }
+
+    #reference img {
+        width: 150px;
+    }
+    
+    #reference #apple {
+        width: 115px;
+    }
+
+    #features, #reference {
+        height: 50vh;
+    }
+
+    footer .link-container {
+        width: 40vw;
+    }
+
+}
+
+@media screen and (max-width: 1147px) {
+    
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    main div {
+        width: 65vw;
+        height: auto;
+        text-align: center;
+    }
+
+    main img {
+        align-self: center;
+        margin-right: 0;
+        width: 65vw;
+    }
+
+}
+
+@media screen and (max-width: 1020px) {
+    
+    #features {
+        height: auto;
+    }
+    
+    #features .feat-container {
+        flex-direction: column;
+        gap: 2em;
+        width: auto;
+        padding: var(--top);
+    }
+
+    footer .container-left {
+        width: 40vw;
+    }
+
+    footer .container-left img {
+        width: 7em;
+    }
+
+    footer .container-left span {
+        font-size: 12px;
+    }
+    
+    footer .link-container {
+        width: 50vw;
+    }
+
+    footer .link-container span {
+        font-size: 20px;
+    }
+
+    footer .link-container a {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+
+    header .container{
+        display: none;
+    }
+
+    header .container-collapse {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 675px) {
+    
+    main div h1 {
+        font-size: 36px;
+    }
+
+    main div p {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    
+    #reference {
+        height: auto;
+    }
+    
+    #reference div {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5em;
+        padding: var(--top);
+    }
+    
+    footer {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 40vh;
+    }
+
+    footer .link-container {
+        width: 70vw;
+    }
+
+    footer .link-container ul {
+        padding-left: 0;
+    }
+
+    footer .container-left {
+        width: 70vw;
+    }
+
+    footer .container-left img {
+        width: 10em;
+        align-self: center;
+    }
+
 }
