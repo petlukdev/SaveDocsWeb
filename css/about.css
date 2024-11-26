@@ -51,7 +51,8 @@ header .logo {
     line-height: 0;
 }
 
-header .logo img {
+header .logo img,
+header .container-collapse img {
     width: 10em;
 }
 
@@ -76,6 +77,18 @@ header nav a:hover {
     opacity: 0.8;
 }
 
+header .container-collapse {
+    display: none;
+}
+
+header .menu-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 45px;
+    cursor: pointer;
+}
+
 .btn {
     cursor: pointer;
     border: none;
@@ -97,6 +110,41 @@ header nav a:hover {
     transition: .1s;
 }
 
+/* Boční menu */
+
+aside {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+aside a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+    color: white;
+    text-wrap: nowrap;
+}
+
+aside .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 64px;
+    background: none;
+    border: none;
+    color: white;
+}
+
 /* Banner */
 
 #banner {
@@ -111,8 +159,8 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    height: 60vh;
+    gap: 2em;
+    height: 100%;
     padding: var(--top) var(--left);
 }
 
@@ -237,4 +285,123 @@ footer a {
     font-size: 20px;
     font-weight: 300;
     text-decoration: none;
+}
+
+@media screen and (max-width: 1618px) {
+    
+    #about p {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 1423px) {
+
+    footer .link-container {
+        width: 40vw;
+    }
+
+}
+
+@media screen and (max-width: 1215px) {
+    
+    #contact {
+        gap: 3em;
+        height: 100%;
+    }
+    
+    #contact .info {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        width: auto;
+    }
+
+}
+
+@media screen and (max-width: 1020px) {
+
+    footer .container-left {
+        width: 40vw;
+    }
+
+    footer .container-left img {
+        width: 7em;
+    }
+
+    footer .container-left span {
+        font-size: 12px;
+    }
+    
+    footer .link-container {
+        width: 50vw;
+    }
+
+    footer .link-container span {
+        font-size: 20px;
+    }
+
+    footer .link-container a {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+
+    header .container{
+        display: none;
+    }
+
+    header .container-collapse {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #contact .socials img {
+        width: 4em;
+    }
+
+    #contact .info {
+        font-size: 20px;
+    }
+
+    #contact .info img {
+        width: 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 675px) {
+
+    h2 {
+        font-size: 30px;
+    }
+    
+    footer {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 40vh;
+    }
+
+    footer .link-container {
+        width: 70vw;
+    }
+
+    footer .link-container ul {
+        padding-left: 0;
+    }
+
+    footer .container-left {
+        width: 70vw;
+    }
+
+    footer .container-left img {
+        width: 10em;
+        align-self: center;
+    }
+
 }
