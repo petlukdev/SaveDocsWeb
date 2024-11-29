@@ -58,7 +58,8 @@ header .logo {
     line-height: 0;
 }
 
-header .logo img {
+header .logo img,
+header .container-collapse img {
     width: 10em;
 }
 
@@ -83,11 +84,58 @@ header nav a:hover {
     opacity: 0.8;
 }
 
+header .container-collapse {
+    display: none;
+}
+
+header .menu-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 45px;
+    cursor: pointer;
+}
+
 header .btn {
     font-weight: bold;
     font-size: 20px;
     background-color: var(--blue);
     padding: 10px 35px;
+}
+
+/* Boční menu */
+
+aside {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+aside a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+    color: white;
+    text-wrap: nowrap;
+}
+
+aside .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 64px;
+    background: none;
+    border: none;
+    color: white;
 }
 
 /* Hlavní sekce */
@@ -217,4 +265,119 @@ footer a {
     font-size: 20px;
     font-weight: 300;
     text-decoration: none;
+}
+
+@media screen and (max-width: 1423px) {
+
+    footer .link-container {
+        width: 40vw;
+    }
+
+}
+
+@media screen and (max-width: 1020px) {
+
+    main .plans {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    main .plans div {
+        height: 85vh;
+        width: 25em;
+    }
+    
+    footer .container-left {
+        width: 40vw;
+    }
+
+    footer .container-left img {
+        width: 7em;
+    }
+
+    footer .container-left span {
+        font-size: 12px;
+    }
+    
+    footer .link-container {
+        width: 50vw;
+    }
+
+    footer .link-container span {
+        font-size: 20px;
+    }
+
+    footer .link-container a {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+
+    header .container{
+        display: none;
+    }
+
+    header .container-collapse {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 675px) {
+
+    main h2 {
+        font-size: 30px;
+    }
+
+    main .plans div {
+        width: 20em;
+        height: 65vh;
+    }
+
+    main .plans div h3 {
+        font-size: 26px;
+    }
+
+    main .plans div span {
+        font-size: 32px;
+    }
+
+    main .plans div span small {
+        font-size: 16px;
+    }
+
+    main .plans div ul li {
+        font-size: 18px;
+    }
+    
+    footer {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 40vh;
+    }
+
+    footer .link-container {
+        width: 70vw;
+    }
+
+    footer .link-container ul {
+        padding-left: 0;
+    }
+
+    footer .container-left {
+        width: 70vw;
+    }
+
+    footer .container-left img {
+        width: 10em;
+        align-self: center;
+    }
+
 }
