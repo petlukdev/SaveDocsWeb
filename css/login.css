@@ -25,6 +25,21 @@ h2 {
     font-size: 42px;
 }
 
+/* Hlavička */
+
+header {
+    display: none;
+}
+
+header .logo {
+    display: inline-block;
+    line-height: 0;
+}
+
+header .logo img {
+    width: 10em;
+}
+
 /* Levá sekce */
 
 #left {
@@ -160,4 +175,68 @@ h2 {
 .container > p {
     text-align: center;
     font-size: 18px;
+}
+
+@media screen and (max-width: 1300px) {
+    
+    body {
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        height: 10vh;
+        padding: var(--top) var(--left);
+        background-color: var(--green);
+    }
+    
+    #left {
+        display: none;
+    }
+
+    #right {
+        width: 100vw;
+        height: 50em;
+    }
+
+    #right .container {
+        width: 50vw;
+    }
+
+    #right .container .socials {
+        width: 30vw;
+    }
+
+}
+
+@media screen and (max-width: 670px) {
+    
+    #right .container {
+        width: 80vw;
+    }
+
+    #right .container .socials {
+        width: 50vw;        
+    }
+
+}
+
+@media screen and (max-height: 850px) {
+    
+    #right .container {
+        height: 30em;
+    }
+
+}
+
+@media screen and (max-height: 487px) {
+    
+    header .logo img {
+        width: 6em;
+    }
+
 }
