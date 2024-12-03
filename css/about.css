@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: 'Roboto', 'Kadwa', sans-serif;
     overflow-x: hidden;
 }
@@ -35,9 +35,8 @@ hr {
 
 header {
     background-color: var(--green);
-    padding: var(--top) var(--left);
+    padding: 3em var(--left);
     width: 100vw;
-    height: 15vh;
 }
 
 header .container {
@@ -149,7 +148,7 @@ aside .closebtn {
 
 #banner {
     width: 100vw;
-    height: 20vh;
+    height: 12em;
     object-fit: cover;
 }
 
@@ -160,8 +159,7 @@ aside .closebtn {
     flex-direction: column;
     align-items: center;
     gap: 2em;
-    height: 100%;
-    padding: var(--top) var(--left);
+    padding: 3em var(--left);
 }
 
 #about p {
@@ -176,9 +174,9 @@ aside .closebtn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    height: 60vh;
-    padding: var(--top) var(--left);
+    justify-content: space-between;
+    height: 30em;
+    padding: 3em var(--left);
 }
 
 #contact .socials img {
@@ -241,7 +239,8 @@ aside .closebtn {
 footer {
     display: flex;
     justify-content: space-between;
-    padding: var(--top) var(--left);
+    height: 17em;
+    padding: 3em var(--left);
     color: white;
     background-color: #162928;
 }
@@ -384,7 +383,7 @@ footer a {
         justify-content: space-between;
         align-items: center;
         text-align: center;
-        height: 40vh;
+        height: 22em;
     }
 
     footer .link-container {
@@ -402,6 +401,22 @@ footer a {
     footer .container-left img {
         width: 10em;
         align-self: center;
+    }
+
+}
+
+@media screen and (max-width: 405px) {
+    
+    footer .link-container {
+        width: 80vw;
+    }
+
+    footer .link-container span {
+        font-size: 18px;
+    }
+
+    footer .link-container a {
+        font-size: 14px;
     }
 
 }
