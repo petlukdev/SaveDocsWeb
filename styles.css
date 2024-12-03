@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: 'Roboto', 'Kadwa', sans-serif;
     overflow-x: hidden;
 }
@@ -51,9 +51,8 @@ hr {
 
 header {
     background-color: var(--green);
-    padding: var(--top) var(--left);
+    padding: 3em var(--left);
     width: 100vw;
-    height: 15vh;
 }
 
 header .container {
@@ -156,15 +155,13 @@ main {
     justify-content: space-around;
     overflow: hidden;
     width: 100vw;
-    height: 85vh;
     color: white;
     background: linear-gradient(var(--green), #519996, #346361);
 }
 
 main div {
     width: 25vw;
-    height: 70vh;
-    margin: var(--top) var(--left);
+    margin: 3em var(--left);
 }
 
 main div h1 {
@@ -177,7 +174,7 @@ main div p {
 
 main div h1, main div p {
     cursor: default;
-    padding-bottom: var(--top);
+    padding-bottom: .7em;
 }
 
 main div .btn {
@@ -205,8 +202,8 @@ main img {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 60vh;
-    padding: var(--top) var(--left);
+    gap: 3em;
+    padding: 3em var(--left);
 }
 
 .feat-container {
@@ -256,14 +253,14 @@ main img {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 60vh;
-    padding: var(--top) var(--left);
+    gap: 3em;
+    padding: 7em var(--left);
 }
 
 #reference div {
     display: flex;
-    justify-content: space-around;
-    width: 50vw;
+    justify-content: space-between;
+    width: 35em;
 }
 
 #reference img {
@@ -280,9 +277,9 @@ main img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    height: 40vh;
-    padding: var(--top) var(--left);
+    justify-content: space-between;
+    height: 17em;
+    padding: 3em var(--left);
 }
 
 #last .btn {
@@ -317,7 +314,8 @@ main img {
 footer {
     display: flex;
     justify-content: space-between;
-    padding: var(--top) var(--left);
+    height: 17em;
+    padding: 3em var(--left);
     color: white;
     background-color: #162928;
 }
@@ -417,7 +415,7 @@ footer a {
     }
 
     #features, #reference {
-        height: 50vh;
+        height: 30em;
     }
 
     footer .link-container {
@@ -458,7 +456,10 @@ footer a {
         flex-direction: column;
         gap: 2em;
         width: auto;
-        padding: var(--top);
+    }
+
+    #last {
+        height: 17em;
     }
 
     footer .container-left {
@@ -516,7 +517,7 @@ footer a {
     }
     
     #reference {
-        height: auto;
+        height: 45em;
     }
     
     #reference div {
@@ -524,7 +525,7 @@ footer a {
         justify-content: space-around;
         align-items: center;
         gap: 5em;
-        padding: var(--top);
+        padding: 3em;
     }
     
     footer {
@@ -532,7 +533,7 @@ footer a {
         justify-content: space-between;
         align-items: center;
         text-align: center;
-        height: 40vh;
+        height: 22em;
     }
 
     footer .link-container {
@@ -550,6 +551,26 @@ footer a {
     footer .container-left img {
         width: 10em;
         align-self: center;
+    }
+
+}
+
+@media screen and (max-width: 405px) {
+    
+    #last {
+        height: 20em;
+    }
+    
+    footer .link-container {
+        width: 80vw;
+    }
+
+    footer .link-container span {
+        font-size: 18px;
+    }
+
+    footer .link-container a {
+        font-size: 14px;
     }
 
 }
