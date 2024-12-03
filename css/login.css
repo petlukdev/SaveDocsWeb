@@ -11,10 +11,10 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     display: flex;
     font-family: 'Roboto', 'Kadwa', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -79,7 +79,7 @@ header .logo img {
     align-items: center;
     justify-content: space-between;
     width: 25vw;
-    height: 65vh;
+    height: 40em;
 }
 
 .container .socials {
@@ -189,8 +189,7 @@ header .logo img {
         justify-content: space-between;
         align-items: center;
         width: 100vw;
-        height: 10vh;
-        padding: var(--top) var(--left);
+        padding: 1em var(--left);
         background-color: var(--green);
     }
     
@@ -229,14 +228,6 @@ header .logo img {
     
     #right .container {
         height: 30em;
-    }
-
-}
-
-@media screen and (max-height: 487px) {
-    
-    header .logo img {
-        width: 6em;
     }
 
 }
