@@ -47,11 +47,11 @@
             <a class="logo" href="../index.html">
                 <img src="img/Logo.png"/>
             </a>
-            <button class="menu-toggle" onclick="document.getElementById('menu').style.width = '50%';">☰</button>
+            <button class="menu-toggle" onclick="openNav();">☰</button>
         </div>
     </header>
     <aside id="menu">
-        <button class="closebtn" onclick="document.getElementById('menu').style.width = '0';">×</button>
+        <button class="closebtn" onclick="closeNav();">×</button>
         <ul>
             <li><a href="html/about.html">About Us</a></li>
             <li><a href="html/plans.html">Plans</a></li>
@@ -168,5 +168,16 @@
             </div>
         </div>
     </footer>
+    <script type="application/javascript">
+        
+        function openNav() {
+            document.getElementById("menu").style.width = "50%";
+        }
+
+        function closeNav() {
+            document.getElementById("menu").style.width = "0";
+        }
+
+    </script>
 </body>
 </html>
